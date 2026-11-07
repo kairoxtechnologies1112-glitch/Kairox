@@ -1,0 +1,14 @@
+{
+  "routes": [
+    { "path": "/", "title": "Home" },
+    { "path": "/services", "title": "Services" },
+    { "path": "/services/:slug", "title": "Service Details" },
+    { "path": "/work", "title": "Our Work" },
+    { "path": "/work/:slug", "title": "Project Details" },
+    { "path": "/about", "title": "About Us" },
+    { "path": "/process", "title": "Our Process" },
+    { "path": "/contact", "title": "Contact Us" },
+    { "path": "/privacy", "title": "Privacy Policy" },
+    { "path": "/terms", "title": "Terms and Conditions" }
+  ]
+}

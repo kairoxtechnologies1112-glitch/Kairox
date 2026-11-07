@@ -1,0 +1,11 @@
+import Link from 'next/link';
+import { ArrowUpRight, ArrowDown } from 'lucide-react';
+import { ProjectCard } from '@/components/ProjectCard';
+import { demoProjects } from '@/lib/projects';
+import { pageMetadata } from '@/lib/metadata';
+
+export const metadata = pageMetadata('Our Work', 'Explore concept and demo projects for restaurant websites, CRM, appointment management and business automation.', '/work');
+
+export default function WorkPage() {
+  return <main id="main" className="inner-page work-page"><section className="page-hero wrap"><p className="eyebrow"><span className="eyebrow-mark" />Work / Concepts in motion</p><h1>Work worth<br /><span>looking closer at.</span></h1><div className="page-hero-bottom"><p>Explore interactive concepts built to make an idea tangible. Our examples are clearly marked; they are not client case studies.</p><Link href="/contact" className="button button--primary">Build something together <ArrowUpRight size={16} /></Link></div><a href="#concepts" className="scroll-hint"><ArrowDown size={15} /> Explore the work</a></section><section id="concepts" className="section-pad work-section"><div className="wrap"><div className="portfolio-category"><div className="portfolio-category__head"><div><p className="eyebrow"><span className="eyebrow-mark" />01 / Concept & Demo Projects</p><h2>Ideas you can interact with.</h2></div><p>Fictional examples. Sample information and interactions only.</p></div><div className="projects-grid">{demoProjects.map((project) => <ProjectCard project={project} key={project.slug} />)}</div></div><div className="real-projects"><div className="real-projects__mark" aria-hidden="true"><span /><i /></div><div><p className="eyebrow"><span className="eyebrow-mark" />02 / Real Client Projects</p><h2>Our client work will live here.</h2><p>We have not added client projects yet. When we share real work, it will be with permission and verified details—not invented names, testimonials or results.</p></div><span className="real-projects__empty">No published client projects</span></div><div className="portfolio-note"><span className="mono-label">A NOTE ON DEMONSTRATIONS</span><p>These demos show possible product experiences. They do not imply a completed client engagement, customer result or live business integration.</p></div></div></section></main>;
+}
